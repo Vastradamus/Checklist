@@ -10,7 +10,9 @@ module.exports = {
             const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
             const itemsDone = await Todo.countDocuments({userId:req.user.id,completed: true})
             const foldersAll = await Folder.find({user:req.user.id})
-            res.render('list.ejs', {todos: todoItems, left: itemsLeft, done: itemsDone, user: req.user, checklistId: req.params.id, checklist: clName, folders: foldersAll})
+            const checklistAll = await Checklist.find({user:req.user.id})
+
+            res.render('list.ejs', {todos: todoItems, left: itemsLeft, done: itemsDone, user: req.user, checklistId: req.params.id, checklist: clName, folders: foldersAll, checklists: checklistAll})
             console.log(clName)
         }catch(err){
             console.log(err)
