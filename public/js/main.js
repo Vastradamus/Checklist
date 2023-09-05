@@ -1,15 +1,37 @@
 
-const todoItem = document.querySelectorAll('span.not')
+const todoItem = document.querySelectorAll('.todoCheckbox')
 const todoComplete = document.querySelectorAll('span.completed')
+const todoCheckbox = document.querySelectorAll('span.not')
 
 
-Array.from(todoItem).forEach((el)=>{
-    el.addEventListener('click', markComplete)
-})
 
-Array.from(todoComplete).forEach((el)=>{
-    el.addEventListener('click', markIncomplete)
-})
+
+class ArrWithEvents {
+    constructor(arrayFrom, functionUse) {
+        const iterableItem = document.querySelectorAll(arrayFrom)
+
+        Array.from(iterableItem).forEach((el)=>{
+            el.addEventListener('click', functionUse)
+        })
+    
+    }}
+   
+    const textComplited = new ArrWithEvents ('span.completed',markComplete)
+    const checBoxComplited = new ArrWithEvents ('.todoCheckbox',markComplete)
+    const textIncomplete = new ArrWithEvents ('span.not',markIncomplete)
+    const checkBoxIncomplete = new ArrWithEvents('.todoCheckbox',markIncomplete)
+// Array.from(todoCheckbox).forEach((el)=>{
+//     el.addEventListener('click', markComplete)
+// })
+
+
+// Array.from(todoItem).forEach((el)=>{
+//     el.addEventListener('click', markComplete)
+// })
+
+// Array.from(todoComplete).forEach((el)=>{
+//     el.addEventListener('click', markIncomplete)
+// })
 
 
 // markComplite
@@ -17,7 +39,7 @@ Array.from(todoComplete).forEach((el)=>{
 
 
 async function markComplete(){
-    const todoId = this.parentNode.dataset.id
+    const todoId = event.target.closest('li').dataset.id;
     try{
         const response = await fetch('/list/markComplete', {
             method: 'put',
@@ -35,7 +57,7 @@ async function markComplete(){
 }
 
 async function markIncomplete(){
-    const todoId = this.parentNode.dataset.id
+    const todoId = this.parentNode.parentNode.dataset.id;
     try{
         const response = await fetch('/list/markIncomplete', {
             method: 'put',
@@ -65,7 +87,7 @@ class Del {
     }
 
     async deleteTodo(){
-        const todoId = event.target.parentNode.dataset.id
+        const todoId = event.target.closest('li').dataset.id;
         try{ 
             const response = await fetch(`${this.route}`, {
                 method: 'delete',
@@ -131,3 +153,18 @@ overlay.addEventListener('click', () => {
   copyChecklistForm.classList.add('hidden');
   overlay.classList.add('hidden');
 });
+
+
+
+// li hidden functionality
+
+const todoLi = document.querySelectorAll('todoItem')
+
+Array.from(todoLi).forEach((el)=>{
+    el.addEventListener('mouseover', () => {
+
+    })
+})
+
+
+

@@ -125,7 +125,6 @@ const REDIRECT_ROUTES = {
         userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
-        fullName: req.body.fullName
       });
   
       await user.save();
