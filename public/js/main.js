@@ -1,25 +1,36 @@
 
-const todoItem = document.querySelectorAll('.todoCheckbox')
-const todoComplete = document.querySelectorAll('span.completed')
-const todoCheckbox = document.querySelectorAll('span.not')
+// const todoItem = document.querySelectorAll('.todoCheckbox')
+// const todoComplete = document.querySelectorAll('span.completed')
+// const todoCheckbox = document.querySelectorAll('span.not')
 
 
+function handleCheckboxClick(event) {
+    const checkbox = event.target;
+    if (checkbox.checked) {
+        markComplete(event);
+    } else {
+        markIncomplete(event);
+    }
+}
 
 
 class ArrWithEvents {
-    constructor(arrayFrom, functionUse) {
-        const iterableItem = document.querySelectorAll(arrayFrom)
+    constructor(selector, handler) {
+        const elements = document.querySelectorAll(selector);
 
-        Array.from(iterableItem).forEach((el)=>{
-            el.addEventListener('click', functionUse)
-        })
-    
-    }}
+        elements.forEach((el) => {
+            el.addEventListener('click', handler);
+        });
+    }
+}
+
+// Initialize event listeners
+const checkboxes = new ArrWithEvents('.todoCheckbox', handleCheckboxClick);
    
-    const textComplited = new ArrWithEvents ('span.completed',markComplete)
-    const checBoxComplited = new ArrWithEvents ('.todoCheckbox',markComplete)
-    const textIncomplete = new ArrWithEvents ('span.not',markIncomplete)
-    const checkBoxIncomplete = new ArrWithEvents('.todoCheckbox',markIncomplete)
+    // const textComplited = new ArrWithEvents ('span.completed',markComplete)
+    // const checBoxComplited = new ArrWithEvents ('.todoCheckbox',markComplete)
+    // const textIncomplete = new ArrWithEvents ('span.not',markIncomplete)
+    // const checkBoxIncomplete = new ArrWithEvents('.todoCheckbox',markIncomplete)
 // Array.from(todoCheckbox).forEach((el)=>{
 //     el.addEventListener('click', markComplete)
 // })
@@ -57,7 +68,7 @@ async function markComplete(){
 }
 
 async function markIncomplete(){
-    const todoId = this.parentNode.parentNode.dataset.id;
+    const todoId = event.target.closest('li').dataset.id;
     try{
         const response = await fetch('/list/markIncomplete', {
             method: 'put',

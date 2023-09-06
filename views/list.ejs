@@ -17,30 +17,37 @@
   <aside class="hidden md:block md:w-1/5 p-4 rounded mr-6 overflow-y-auto border border-gray-200">
     <div class="flex flex-col items-center">
       <h2 class="text-lg font-bold mb-4">Other Checklists</h2>
-  
+      
       <!-- Folders list with folder icon -->
-      <ul class="list-decimal list-inside w-full">
+      <ul class="list-disc list-inside w-full mb-4">
         <% folders.forEach( el => { %>
-        <li class='todoItem my-2 flex items-center' data-id='<%=el._id%>'>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M2 6a2 2 0 012-2h5l2 2h7a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+        <li class='todoItem my-3 flex items-center' data-id='<%=el._id%>'>
+          <!-- Folder Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-6L8 2H6zm.5 4h11c.3 0 .5.2.5.5v12c0 .3-.2.5-.5.5h-11c-.3 0-.5-.2-.5-.5v-12c0-.3.2-.5.5-.5zm3 1v10h1V7h-1zm4 0v10h1V7h-1z"/>
           </svg>
           <a href="/folder/<%= el._id%>" class="text-blue-500 hover:underline"> <span><%= el.name%></span></a>
         </li>
         <% }) %>
       </ul>
-  
-      <!-- Alone checklists -->
-      <ul class="list-decimal list-inside w-full">
+      
+      <!-- Separate checklists with pen icon -->
+      <ul class="list-none w-full">
         <% checklists.forEach( el => { %>
         <% if (!el.folder) { %>
-        <li class='todoItem my-2' data-id='<%=el._id%>'>
+        <li class='todoItem my-3 flex items-center' data-id='<%=el._id%>'>
+          <!-- Pen Icon for Separate Checklists -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.03 2.2c.6-.6 1.5-.6 2.1 0l6.7 6.7c.6.6.6 1.5 0 2.1l-8.5 8.5-8.5 2.5 2.5-8.5 8.5-8.5zM3 22l1-4 3 3-4 1z"/>
+          </svg>
           <a href="/list/<%= el._id%>" class="text-blue-500 hover:underline"> <span><%= el.title%></span></a>
         </li>
         <% }}) %>
       </ul>
     </div>
   </aside>
+  
+  
   
 
   <main class="flex-grow overflow-y-auto">
