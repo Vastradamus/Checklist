@@ -9,7 +9,10 @@
   <title>Document</title>
 </head>
 
-<body class="bg-gray-200">
+<body >
+
+  <%- include('partials/navbar') %>
+  
 
 <div class="flex flex-col md:flex-row p-4 sm:p-6 lg:p-8 lg:mr-20 bg-white shadow-lg rounded-lg w-full h-screen">
   
@@ -95,13 +98,13 @@
       <span class="text-xl font-bold">
         <%= todos.length %> tasks
       </span>
-      <a href="/logout" class="text-blue-500 hover:text-blue-600 border border-blue-500 px-2 py-1 rounded">Logout</a>
+  
     </div>
   </main>
 </div>
 
 <!-- Other necessary components -->
-
+<%- include('partials/footer') %>
 <script src="/js/main.js"></script>
 </body>
 
