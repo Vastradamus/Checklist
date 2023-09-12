@@ -1,5 +1,5 @@
 const Todo = require('../models/List')
-const Folder = require('../models/folder')
+const Folder = require('../models/Folder')
 const Checklist = require('../models/checklist')
 
 module.exports = {
