@@ -1,5 +1,5 @@
 const Checklist = require('../models/checklist')
-const Folder = require('../models/folder')
+const Folder = require('../models/Folder')
 const Todo = require('../models/List')
 module.exports = {
     getChecklist: async (req,res)=>{
