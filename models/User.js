@@ -4,11 +4,7 @@ const { Schema } = mongoose
 
 const UserSchema = new mongoose.Schema({
  
- fullName: {
-  type: String, 
-    required: true,
- },
- 
+
   userName: { 
     type: String, 
     unique: true,

@@ -5,7 +5,8 @@ module.exports = {
         console.log(req.params.folderId)
         try{
             const checklistAll = await Checklist.find({folder:req.params.folderId})
-            res.render('folder.ejs', {checklists: checklistAll, user: req.user, folderId: req.params.folderId})
+            const foldersAll = await Folder.find({user:req.user.id})
+            res.render('folder.ejs', {checklists: checklistAll, user: req.user, folderId: req.params.folderId ,folders: foldersAll })
         }catch(err){
             console.log(err)
         }
