@@ -52,6 +52,7 @@ app.use('/list', listRoutes)
 app.use('/folder/',folderRoutes)
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
   console.log(`Server is running on a port ${process.env.PORT}, you better catch it!`)
 })  
+  
