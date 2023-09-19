@@ -18,17 +18,17 @@ Elevate your task management journey with **TickBoxed**. Whether it's daily erra
 - **Frontend**: JavaScript, Tailwind, EJS
 - **Backend**: Node, Express
 
-## 📈 **Areas of Enhancement:**
+## 📈 *Room for Improvement:**
 
 - **Collaborative Checklists**: Venture into collaborative task management with shared checklists.
 - **Community Checklists**: Introduce template checklists, enabling users to adopt and adapt.
 - **Notifications & Reminders**: Never miss a beat with timely alerts for upcoming or overdue tasks.
 
-## 💡 **Reflections & Insights:**
+## 💡 **Lessons & Reflection::**
 
 The journey of building TickBoxed underscored the significance of design. Navigating the landscape of deployment presented its challenges. A hindsight realization? The value of early deployment. Rolling out incremental updates post-launch would have painted a clearer picture of the progression.
 
-## 🎨 **More From My Palette:**
+## ## More From My Portfolio:
 
 - **ExpensifyIt**: Decode your spending. An astute tool for managing and analyzing receipts. [**View on GitHub**](https://github.com/Vastradamus/expensifyit)
 - **Apartmani Petra**: Analyze and engage with Twitter data like never before. [**View on GitHub**](https://github.com/Vastradamus/Petra)
