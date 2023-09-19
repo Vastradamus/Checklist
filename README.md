@@ -4,7 +4,8 @@ Elevate your task management journey with **TickBoxed**. Whether it's daily erra
 
 [**🚀 Live Demo of TickBoxed**](https://tickboxed.cyclic.app/)
 
-![TickBoxed UI](https://github.com/YourGithubUsername/tickboxed/assets/screenshot.png)
+![image](https://github.com/Vastradamus/TickBoxed/assets/122864019/19e87c0c-50d9-4b46-99b1-ace85a31418b)
+
 
 ## 🌟 **Features:**
 
@@ -29,9 +30,9 @@ The journey of building TickBoxed underscored the significance of design. Naviga
 
 ## 🎨 **More From My Palette:**
 
-- **ExpensifyIt**: Decode your spending. An astute tool for managing and analyzing receipts. [**Explore on GitHub**](https://github.com/Vastradamus/expensifyit)
-- **Apartmani Petra**: A deep dive into Twitter data, wrapped in an immersive experience. [**Explore on GitHub**](https://github.com/Vastradamus/Petra)
+- **ExpensifyIt**: Decode your spending. An astute tool for managing and analyzing receipts. [**View on GitHub**](https://github.com/Vastradamus/expensifyit)
+- **Apartmani Petra**: Analyze and engage with Twitter data like never before. [**View on GitHub**](https://github.com/Vastradamus/Petra)
 
 ---
 
-🤝 *Keen on a collaboration or thinking of hiring? Let's [**connect!**][(https://www.linkedin.com/in/marko-vasic/)*
+*Interested in collaborating or hiring? Let's [connect](https://www.linkedin.com/in/marko-vasic/)!*
